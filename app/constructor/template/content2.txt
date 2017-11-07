@@ -1,0 +1,11 @@
+
+    def %(func_name)s(self, **kwargs):
+        """ %(func_name)s """
+        response, kwassert = kwargs.get('response'), kwargs.get('kwassert')
+
+        ''' %(caseDescription)s '''
+        payload = "%(body)s"
+        req_url = "%(uri)s"
+        r = requests.post(req_url, data=payload)
+        self.result = r.json()
+        self.assertEqual(self.result['message'], 'parameter error')
