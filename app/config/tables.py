@@ -10,7 +10,7 @@ from .connect import TestCase
 from . import SESSION
 
 
-class BaseSqlite:
+class BaseSqlite:##【lesq??】这个元类的作用是什么？？？
     """ sqlite 元类"""
     table_enu = {
         'test_case': TestCase

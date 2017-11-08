@@ -52,11 +52,11 @@ class CreateCase:
             query_info = UseCaseOperation.query_test_case_info(
                 uri=params_dict.get('uri'),
                 func_name=params_dict.get('func_name'),
-                type=0
+                type=0##【lesq??】这里type的作用是什么？？
             )
 
             if query_info.get('uri') == params_dict.get('uri') and query_info.get('func_name') ==params_dict.get('func_name'):
-                return message.CASE_ALREADY_EXISTS
+                return message.CASE_ALREADY_EXISTS##【lesq??】为什么uri和func_name相同的时候就判定CASE_ALREADY_EXISTS???
             UseCaseOperation.add_test_case(**params_dict)
 
     @classmethod

@@ -16,7 +16,7 @@ class AddCaseWrapper(BaseSqlite):
         """ 初始化， params参数为装饰器接受参数
         该参数为 sqlite 中数据表的表名
         """
-        self.table = self.table_enu.get(table)
+        self.table = self.table_enu.get(table)##【lesq??】这句的作用是什么？？？
 
     def __call__(self, function):
         """ 装饰器主方法, function为被挂在该装饰器的函数对象"""
