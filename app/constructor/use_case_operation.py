@@ -14,7 +14,7 @@ class UseCaseOperation:
 
     @classmethod
     @util.QueryCaseInfo("test_case")
-    def query_test_case_info(cls,**kwargs):
+    def query_test_case_info(cls,**kwargs):##[lesq??]这个方法的主要作用是什么？
         """查询指定case 的全部信息"""
 
     @classmethod

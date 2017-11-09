@@ -49,7 +49,7 @@ class CreateCase:
                 body=rx[5].value,
                 kwassert=rx[6].value
             )
-            query_info = UseCaseOperation.query_test_case_info(
+            query_info = UseCaseOperation.query_test_case_info(##[lesq??]这里的目的是想要供后续判断这条用例是否已经存在？但是query_test_case_info方法还没有完善？
                 uri=params_dict.get('uri'),
                 func_name=params_dict.get('func_name'),
                 type=0##【lesq??】这里type的作用是什么？？
@@ -60,7 +60,7 @@ class CreateCase:
             UseCaseOperation.add_test_case(**params_dict)
 
     @classmethod
-    def get_case_class_name(cls):
+    def get_case_class_name(cls):##[lesq]用于生成用例文件时用作类名
         """获取所有class case name"""
         cls.import_files_case_to_sqlite()
         all_case_info=UseCaseOperation.query_test_case_info(type=0)
@@ -74,7 +74,7 @@ class CreateCase:
 
 
     @classmethod
-    def get_case_function_name(cls):
+    def get_case_function_name(cls):##[lesq]用于生成用例文件时用作test_case的名字
         """获取同一模块（class）下的所有function name"""
         result= {}
         #logging.info(cls.get_case_class_name())
