@@ -56,7 +56,7 @@ class CreateCase:
             )
 
             if query_info.get('uri') == params_dict.get('uri') and query_info.get('func_name') ==params_dict.get('func_name'):
-                return message.CASE_ALREADY_EXISTS##【lesq??】为什么uri和func_name相同的时候就判定CASE_ALREADY_EXISTS???
+                return message.CASE_ALREADY_EXISTS##【lesq??】为什么uri和func_name相同的时候就判定CASE_ALREADY_EXISTS???【后面这里要优化一下，加上CaseID来判断重复】
             UseCaseOperation.add_test_case(**params_dict)
 
     @classmethod
@@ -96,7 +96,7 @@ class CreateCase:
         content = FileMeta.content.read().decode()
         #logging.info(type(content))
 
-        for key,value in cls.get_case_function_name().items():
+        for key,value in cls.get_case_function_name().items():##[lesq??]这里是怎么把各个用例的关键词写进文件里面的？通过headers.format(key,key)吗？
             #logging.info(cls.get_case_function_name().items())
             if not isinstance(value,list):
                 with open(

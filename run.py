@@ -65,6 +65,6 @@ def load_tests(loader,tests,pattern):
 if __name__ == '__main__':
     try:
         #logging.info(sys.getdefaultencoding())
-        unittest.main()##[lesq??]这里用了unittest.main()是会直接搜索本模块中以"test"命名开头的测试方法吗？还是运行46行的runner.run(suite)?
+        unittest.main()##[lesq??]这里用了unittest.main()直接调用了load_tests()方法，这个是什么机制呢？暂时没有找到相关文档
     except TypeError:
         UseCaseOperation.clear_test_data()
