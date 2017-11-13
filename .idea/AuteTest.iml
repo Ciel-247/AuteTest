@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.6.3 (C:\Users\lesq\AppData\Local\Programs\Python\Python36\python3.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="AuteTest_v20171113" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="py.test" />
